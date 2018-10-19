@@ -1,14 +1,121 @@
+
+body
+{
+	background: #2e88f9;
+	overflow-x: hidden !important;
+}
+h1
+{
+	font-family: Open Sans;
+	color: #fff;
+	font-weight: 700;
+	font-size: 3.3em;
+}
+.contentTyper
+{
+	display: flex;
+	align-items: center;
+	padding: 2em 4em;
+	justify-content: space-between;
+}
+.credits
+{
+	height: 92vh;
+	background: #fff;
+	width: 26em;
+	display: flex;
+	margin-left: 13em;
+	border-radius: 20px;
+	overflow-y: auto;
+    padding-bottom: 2em;
+}
+.TyperBody
+{
+	width: 52%;
+}
+.CampoContent
+{
+	width: 70%
+}
+.bodyContent
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4em;
+}
+.InfoContent
+{
+	width: 32%;
+}
+.informacoes
+{
+	margin-top: 0em
+}
+.informacoes li
+{
+	color: #fff;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: Open Sans;
+	font-size: .9em;
+}
+.fraseicon
+{
+	margin-right: .2em;
+}
+.tamanhoicon
+{
+	margin-right: .5em;
+}
 .campo-digitacao {
 	height: 130px;
-	border:3px solid black;
-
+	border:2px solid #c5c5c5;
+	border-radius: 10px;
+	background: #fff;
+	padding: 1em;
+	font-family: Open Sans;
 }
 .campo-digitacao {
 	font-size: 20px;
 }
+.contador
+{
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-end;
+}
+.botao
+{
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3em;
+	height: 3em;
+	cursor: pointer;
+}
+.botoes
+{
+	margin-bottom: 1em;
+}
+.botao img
+{
+	max-width: 2em;
 
+}
+.contador li
+{
+	color: #fff;
+	font-family: Open Sans;
+	font-weight: 600;
+}
 .frase {
-	font-size:20px;
+	font-family: Open Sans;
+	color: #fff;
+	font-size: 1.3em;
+	width: 81%;
+	margin: 0 auto;
 }
 .campo-desabilitado {
 	background-color: lightgray;
@@ -18,13 +125,16 @@
 }
 .borda-verde {
 	border: 3px solid green;
-
+	
 }
 .borda-vermelha {
- 	border: 3px solid red;
+	border: 3px solid red;
 }
 .placar {
 	display: none;
+	width: 84%;
+    margin: 0 auto;
+    margin-top: 1em;
 }
 body {
 	overflow: scroll;
@@ -45,7 +155,7 @@ body {
 }
 .select-usuarios {
 	display: inline-block;
-
+	
 }
 #usuarios {
 	display: block;

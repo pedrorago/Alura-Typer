@@ -2,7 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Alura Typer</title>
+    <title>Typer Gamer</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/libs/selectize.default.css">
@@ -11,76 +13,94 @@
     
 </head>
 <body>
-	<div class="container">
-   <h1 class="center">Alura Typer</h1>
-   <p class="frase center">Voce tem que digitar essa frase o mais rapido que conseguir antes que o tempo acabe!</p>
-
-   <div class="center">
-   <img src="img/spinner.gif" alt="spinner" id ="spinner"/>
-   <p class="erro center">Ocorreu um erro, por favor tente mais tarde.</p>
-   <p class="sucesso center">Placar salvo com suacesso!</p>
-   </div>
-
-   <ul class="informacoes center">
-   		<li>
-   		<i class="small material-icons icones">description</i>
-   		<span id="tamanhoFrase" ></span> palavras
-   		</li>
-   		<li>
-   		<i class="smal material-icons icones">query_builder</i>
-   		<span id="tempo-digitacao" >10</span> segundos
-   		</li>
-   </ul>
+    <div class='contentTyper'>
 
 
-   <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+      <div class='TyperBody'>
+          <h1 class="center">Typer game</h1>
+          <p class="frase center">You have to type this phrase as fast as you can before the time runs out!</p>
+       
+          <div class="center">
+          <img src="img/spinner.gif" alt="spinner" id ="spinner"/>
+          <p class="erro center">An error occurred, please try again later.
+            </p>
+          <p class="sucesso center">Score saved successfully!
+            </p>
+          </div>
+       
+          <div class='bodyContent'>
 
-   <div class="botoes">
-     <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons botao-reiniciar">restore</i>
-     </a>
-     <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons botao-placar">assignment</i>
-     </a>
-      <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons botao-frase">shuffle</i>
-     </a>
-      <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons botao-frase-id">repeat_one</i>
-     </a>
-     <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="tooltip material-icons botao-sync" title="Placar salvo no nosso banco de dados!">swap_vert</i>
-     </a>
-     <input type="number" id="frase-id" min="0">
+            <div class='InfoContent'>
+                <ul class="informacoes">
+                    <li>
+                    <i class="small material-icons icones fraseicon">description</i>
+                    <span id="tamanhoFrase" ></span> WORDS
+                    </li>
+                    <li>
+                    <i class="smal material-icons icones tamanhoicon">query_builder</i>
+                    <span id="tempo-digitacao" >10</span> SECONDS
+                    </li>
+                </ul>
+                <div class='botoes'>
+                    <a class="botao-reiniciar botao" title='Reset frase'><img src='img/settings.svg'>
+                    </a>
+                    <a class="botao-placar botao" title='Show score'><img src='img/list.svg'>
+                    </a>
+                     <a class="botao-frase botao" title='Next'><img src='img/fast-forward-arrows.svg'>
+                    </a>
+                     <a class="botao-frase-id botao" title='Save ID'><img src='img/two-circling-arrows.svg'>
+                    </a>
+                    <a class="botao-sync botao"  title="Score saved successfully!"><img src='img/save.svg'>
+                    </a>
+                </div>
 
-     <div class="select-usuarios">
-        <select id="usuarios">
-          <option value="Douglas">Douglas</option>
-          <option value="Flavio">Flavio</option>
-          <option value="Nico">Nico</option>
-        </select>
-     </div>
+                <div class="select-usuarios">
+                    <select id="usuarios">
+                      <option value="Douglas">Douglas</option>
+                      <option value="Flavio">Flavio</option>
+                      <option value="Nico">Nico</option>
+                    </select>
+                 </div>
+                <input type="number" id="frase-id" min="0">
 
-   </div>
+            </div>
+            
+            <div class='CampoContent'>
+                <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
 
-   <ul class="center">
-   		<li><span id="contador-caracteres">0</span> caracteres</li>
-   		<li><span id="contador-palavras">0</span> palavras</li>
-   </ul>
+       
+                <ul class="contador">
+                    <li><span id="contador-caracteres">0</span> characters</li>
+                    <li><span id="contador-palavras">0</span> seconds</li>
+                </ul>
+            </div>
 
-   <section class="placar">
-   	<h3 class="center">Placar</h3>
-   	<table class="centered bordered">
-   		<thead>
-   			<tr>
-   				<th>Nome</th>
-   				<th>N. de palavras</th>
-   				<th>Remover</th>
-   			</tr>
-   		</thead>
-   		<tbody>
-   			
-   		</tbody>
-   	</table>
-   </section>
-   </div>
+          </div>
 
-  <script src="js/jquery.js"></script>
+      </div>
+
+      <div class='credits'>
+          <section class="placar">
+              <h3 class="center">Score</h3>
+              <table class="centered bordered">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>N. of words</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+            </section>
+        </div>
+
+    </div>
+
+
+  <script src="js/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/placar.js"></script>
   <script src="js/frase.js"></script>
